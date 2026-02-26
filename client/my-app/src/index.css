@@ -1,0 +1,38 @@
+@import "tailwindcss";
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.auth-right{
+  background: linear-gradient(135deg, rgba(230, 0, 35, 0.9), rgba(255, 65, 108, 0.8)), url(https://source.unsplash.com/random/1080x1920?movie) center / cover no-repeat;
+  border-top-left-radius: 10px;
+}
+.auth-left{
+  border-top-right-radius: 10px;
+}
+.auth-right{
+  color: rgba(255, 255, 255, 0.6);
+}
+.auth-left form label {
+  font-size: 23px;
+}
+.submit-btn{
+    background: linear-gradient(135deg, rgba(230, 0, 35, 0.9), rgba(255, 65, 108, 0.8)), url(https://source.unsplash.com/random/1080x1920?movie) center / cover no-repeat;
+}
+.submit-btn:hover{
+  background: linear-gradient( 135deg, rgba(255, 65, 108, 0.9), rgba(230, 0, 35, 0.8) ), url(https://source.unsplash.com/random/1080x1920?movie) center / cover no-repeat; transform: scale(1.01);
+}
+.active-line{
+    background: linear-gradient( 135deg, rgba(255, 65, 108, 0.9), rgba(230, 0, 35, 0.8) ), url(https://source.unsplash.com/random/1080x1920?movie) center / cover no-repeat; transform: scale(1.01);
+
+}
