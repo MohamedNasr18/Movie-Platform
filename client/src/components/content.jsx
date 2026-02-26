@@ -29,7 +29,7 @@ const Content = ({search}) => {
       <ContentCard
         key={e._id}
         contentId={e._id}
-        poster={e.poster ? `http://localhost:3000/${e.poster}` : "fallback.jpg"}
+        poster={e.poster ? `${import.meta.env.VITE_API_URL}/${e.poster}` : "fallback.jpg"}
         title={e.title}
         rating={e.rating}
       />

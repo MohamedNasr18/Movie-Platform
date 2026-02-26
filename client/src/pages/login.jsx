@@ -17,7 +17,7 @@ const Login = ({setToken})=>{
 
   const handleLogin=async()=>{
  try{
-     const res= await axios.post('http://localhost:3000/users/login',form)
+     const res= await axios.post(`${import.meta.env.VITE_API_URL}/users/login`,form)
      const token = res.data.token;
      setToken(token)
      localStorage.setItem("token",token)
@@ -51,7 +51,7 @@ const Login = ({setToken})=>{
 
   try {
     const res = await axios.post(
-      "http://localhost:3000/users/",
+      `${import.meta.env.VITE_API_URL}/users/`,
       formData,
       {
         headers: {

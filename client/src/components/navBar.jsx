@@ -23,7 +23,7 @@ const NavBar = ({ search, setSearch, token ,setToken}) => {
 
     const getUser = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/users/me/", {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/users/me/`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -106,7 +106,7 @@ useEffect(()=>{
   <div className="relative" ref={dropdownRef}>
     <img
       onClick={() => setOpen(!open)}
-      src={user?.poster ? `http://localhost:3000/${user.poster}` : "https://i.pravatar.cc/100"}
+      src={user?.poster ? `${import.meta.env.VITE_API_URL}/${user.poster}` : "https://i.pravatar.cc/100"}
       alt="Profile"
       className="w-10 h-10 rounded-full cursor-pointer border-2 border-red-600 object-cover hover:scale-105 transition-transform duration-300"
     />

@@ -2,17 +2,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../pages/authContext";
-import { useContext } from "react";
 
 const SingleContent = () => {
-    const {user} = useContext(AuthContext)
   const { id } = useParams();
   const [content, setContent] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/content/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/content/${id}`);
         setContent(res.data.data);
       } catch (err) {
         console.log(err);
@@ -30,7 +28,7 @@ const SingleContent = () => {
       {/* Poster */}
       <div className="md:w-1/3 flex-shrink-0">
         <img
-          src={`http://localhost:3000/${content.poster}`}
+          src={`${import.meta.env.VITE_API_URL}/${content.poster}`}
           alt={content.title}
           className="w-full h-auto rounded-lg shadow-md object-cover"
         />

@@ -11,7 +11,7 @@ const Favourites = () => {
       if (!token) return;
 
       try {
-        const res = await axios.get("http://localhost:3000/users/me/favourite", {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/users/me/favourite`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -32,7 +32,7 @@ const Favourites = () => {
         <ContentCard
           key={i._id}
           contentId={i._id}
-          poster={i.poster ? `http://localhost:3000/${i.poster}` : "fallback.jpg"}
+          poster={i.poster ? `${import.meta.env.VITE_API_URL}/${i.poster}` : "fallback.jpg"}
           title={i.title}
           rating={i.rating}
         />

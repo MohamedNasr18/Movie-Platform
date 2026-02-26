@@ -18,7 +18,7 @@ const ContentCard = ({ poster, title, rating, contentId }) => {
 
     try {
       const res = await axios.get(
-        "http://localhost:3000/users/me/favourite",
+        `${import.meta.env.VITE_API_URL}/users/me/favourite`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const favIds = res.data.data.map((i) => i._id);
@@ -41,12 +41,12 @@ const ContentCard = ({ poster, title, rating, contentId }) => {
   try {
     if (isFav) {
       // remove favourite
-      await axios.patch(`http://localhost:3000/users/me/favourite/${contentId}`,{}, {
+      await axios.patch(`${import.meta.env.VITE_API_URL}/users/me/favourite/${contentId}`,{}, {
         headers: { Authorization: `Bearer ${token}` },
       });
     } else {
       // add favourite
-      await axios.post(`http://localhost:3000/users/me/favourite/${contentId}`, {}, {
+      await axios.post(`${import.meta.env.VITE_API_URL}/users/me/favourite/${contentId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
     }
