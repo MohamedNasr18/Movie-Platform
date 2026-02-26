@@ -70,8 +70,8 @@ const Login = ({setToken})=>{
 };
     return(
         <>
-         <div className="auth-container flex justify-center items-stretch mt-10 mb-5">
-              <div className="auth-left bg-[#1e1e1e] w-[600px] p-6  text-white">
+         <div className="auth-container flex flex-col md:flex-row justify-center items-stretch mt-10 mb-5">
+              <div className="auth-left bg-[#1e1e1e] w-full md:w-[600px] p-6 text-white">
       
       {/* Tabs */}
       <div className="relative">
@@ -190,7 +190,7 @@ const Login = ({setToken})=>{
     </div>
 
 
-             <div className="auth-right bg-gradient-to-br from-gray-800 to-gray-900 w-[600px] p-8  text-white flex flex-col justify-center">
+             <div className="auth-right bg-gradient-to-br from-gray-800 to-gray-900 w-full md:w-[600px] p-8 text-white flex flex-col justify-center">
     
     <h2 className="text-3xl font-bold mb-4">
       Join Our World of Cinema 🎬
