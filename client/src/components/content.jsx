@@ -8,7 +8,7 @@ const Content = ({search}) => {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/content/");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/content/`);
         setContentData(res.data.data);
       } catch (err) {
         console.log(err);

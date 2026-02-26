@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { AuthContext } from "../pages/authContext";
 
 const SingleContent = () => {
   const { id } = useParams();
